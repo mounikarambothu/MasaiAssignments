@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Evaluation</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        body{
+            background:url(imgAssets/galaxy.png);
+            /* background-color: rgb(57, 57, 141); */
+            color: white;
+                        justify-content: center;
+
+
+        }
+        .container{
+            width: 100px;
+            height: 100px;
+            display: flex;
+            /* justify-content: center; */
+            align-content: center;
+            flex-direction: row;
+
+        }
+        nav{
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            padding-right: 50px;
+            background:url(imgAssets/galaxy.png);
+            color: white;
+        }
+
+        .logodiv{
+            margin: 0 0 0 15px;
+            width: 170px;
+        }
+        nav img{
+            width: 200px;
+            height: 100px;
+        }
+        ul{
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+
+        }
+        ul li{
+            width: 200px;
+            font-size: 20px;
+        }
+        
+        nav button{
+            background: none;
+            color: white;
+            font-size: 20px;
+            display: none;
+        }
+        .container span{
+            display: flex;
+            justify-content: space-between;
+            gap:150px
+        }
+        button{
+            margin: 25px 0 0 -100px;
+            background-color: red;
+            color: white;
+            width: 150px;
+            height: 50px;
+            border: none;
+        }
+        .seriesContainer{
+            margin: 50PX 0 0 100px;
+            width: 80%;
+            display: grid;
+            flex-direction: row;
+            grid-template-columns: repeat(4,300px);
+            gap: 50px;
+            /* justify-content: center;
+            align-content: center; */
+            
+        }
+        .seriesGrid{
+            background:url(imgAssets/galaxy.png);
+            margin: 0 0 30px 0;
+
+            display: block;
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+            height: 450px;
+            background-color:rgb(23, 23, 183);
+            color: white;
+
+        }
+        #seriesImg{
+             /* padding: 10px 0 0 130px; */
+
+            width: 300px;
+            height:300px;
+        }
+        #star{
+             /* padding: 10px 0 0 130px; */
+
+            width: 50px;
+            height: 50px;
+        }
+        
+        .seriesContainer span{
+             /* padding: 0 0 0 50px; */
+             text-align: center;
+            /* gap: 1px; */
+        }
+
+        .seriesContainer button{
+            margin: 0 0 0 30px;
+            color: white;
+            background-color:navy;
+            border: none;
+            width: 100px;
+            height: 50px;
+        }
+        .seriesGrid:hover{
+            transform: scale(1.1,1.1);
+            box-shadow: rgb(255, 242, 242) 0px 5px 15px;
+
+        }
+        .seriesGrid button:hover{
+            box-shadow: rgb(255, 242, 242) 0px 5px 15px;
+
+        }
+        .ExploreContainer{
+
+            margin: 50PX 0 0 100px;
+            width: 80%;
+            display: grid;
+            flex-direction: row;
+            grid-template-columns: repeat(4,300px);
+            gap: 30px;
+            /* justify-content: center;
+            align-content: center; */
+            
+        }
+        .ExploreGrid{
+            display: block;
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+            height: 250px;
+            border:2px solid rgb(22, 3, 166);
+            text-align: center;
+
+        }.ExploreContainer button{
+            border: none;
+            background-color:navy;
+            margin: 0 0 0 10px;
+            color: white;
+
+        }
+        .ExploreContainer button:hover{
+            box-shadow: rgb(255, 242, 242) 0px 5px 15px;
+
+        }
+        .ExploreContainer img{
+            width: 50px;
+            height: 50px;
+            margin: 0 0 0 10px;
+
+        }
+        .ExploreGrid:hover{
+            box-shadow: rgb(255, 242, 242) 0px 5px 15px;
+        }
+        .appContainer{
+            margin: 50PX 0 0 0;
+            background:url(imgAssets/galaxy.png);
+
+            width: 100%;
+            /* background-color: gainsboro; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #mobile{
+            padding: 100px 300px  0 0 ;
+            width: 500px;
+            height: 300px;
+        } #playstore{
+            /* padding: 100px 300px  0 0 ; */
+            width: 200px;
+            height: 70px;
+        }
+        #Explore{
+            background-color: blue;
+            border: 2px solid red;
+            display: none;
+
+            }
+                    @media (min-width: 325px) {
+            .seriesContainer,
+            .ExploreContainer {
+                margin: 50px 0 0 100px;
+                width: 80%;
+                display: grid;
+                grid-template-columns: repeat(1, 300px);
+                gap: 50px;
+            }
+            nav button {
+                border: none;
+                background-color: navy;
+                margin: 0 0 0 10px;
+                color: white;
+                font-size: 20px;
+                display: block;
+            }
+            nav button:hover {
+                box-shadow: rgb(255, 242, 242) 0px 5px 15px;
+            }
+            ul {
+                display: none;
+            }
+            #promoDiv{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 300px;
+            background:#212f70;
+            /* box-shadow: rgb(255, 242, 242) 0px 5px 15px; */
+            /* border: 5px solid white; */
+            box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5); /* Inner shadow effect */
+ 
+
+         }
+         
+        }
+
+        @media (min-width: 400px) {
+            .seriesContainer,
+            .ExploreContainer {
+                grid-template-columns: repeat(2, 300px);
+            }
+            nav button {
+                display: block;
+            }
+            ul {
+                display: none;
+            }
+        }
+
+        @media (min-width: 720px) and (max-width: 1023px) {
+            .seriesContainer,
+            .ExploreContainer {
+                grid-template-columns: repeat(3, 300px);
+            }
+            nav button {
+                display: none;
+            }
+            ul {
+                display: flex;
+                flex-direction: row;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                gap: 20px; /* Add spacing between list items */
+            }
+            ul li {
+                display: inline; /* Ensure each item aligns horizontally */
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .seriesContainer,
+            .ExploreContainer {
+                grid-template-columns: repeat(4, 300px);
+            }
+            nav button {
+                display: none;
+            }
+            ul {
+                display: flex;
+                flex-direction: row;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                gap: 20px; /* Add spacing between list items */
+            }
+            ul li {
+                display: inline; /* Ensure each item aligns horizontally */
+            }
+        }
+
+         input{
+            width: 200px;
+            height: 50px;
+            margin: 15px 50px 0 0;
+         }
+         i{
+            margin: 30px 20px 0 -20px;
+            font-size: 30px;
+            
+         }
+         #promoDiv{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 500px;
+            background:#212f70;
+            /* box-shadow: rgb(255, 242, 242) 0px 5px 15px; */
+            /* border: 5px solid white; */
+            box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5); /* Inner shadow effect */
+ 
+
+         }
+         
+    </style>
+    
+</head>
+<body>
+  
+
+    <div class="container">
+
+        <nav>
+            <span>
+                <div class="logodiv"><img src="imgAssets/GALLOGOO.png">
+                </div>
+           
+            <ul>
+               
+
+                <li><p>Categories</p></li>
+                <li><p>Community</p></li>
+                <li><p>Apps</p></li>
+                <li><p>Get Pass</p></li>
+                <input class="" type="search" placeholder="Search" aria-label="Search">         
+                <i class="bi bi-person-circle"></i>
+
+            </ul>
+             <button>Explore More</button>
+        </nav>    
+    </span>   
+    </div>
+    <div  id="promoDiv">
+        <video autoplay muted loop playsinline width="100%" height="72%">
+            <source src="imgAssets/carousel.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+                </div>
+    <h2 style="margin: 50px 0 0 100px;">Recommended</h2>
+
+    <div class="seriesContainer">
+        <div class="seriesGrid">
+            <span>
+           <img src="https://1.vikiplatform.com/c/39255c/97e5e63d06.jpg?x=b&a=0x0&s=1600x900&e=t&q=g" id="seriesImg"> 
+           <div style="display: flex; align-items:center; gap: 10px;">
+
+            <h2 style="padding: 0 0 0 20px;">Three-Body</h2>
+            <img src="https://img.icons8.com/?size=100&id=4IZ8RiC9K8go&format=png&color=000000" id="star">
+
+            <h3>9.3(4,248)</h3>
+            </div>
+           
+            <div style="display: flex; align-items:center; gap: 10px;">
+                <button>Watch Now</button>
+                <button> + Watch list</button>
+            </div>
+            </span>
+            
+        </div>
+       
+        <div class="seriesGrid">
+            <span>
+           <img src="https://image-resizer-cloud-api.akamaized.net/image/3E153C8E-8C6E-47E9-8697-79644726744B/0-2x3.jpg?width=305&updatedTime=2024-11-15T12:36:09Z&dt=Web" id="seriesImg"> 
+           <div style="display: flex; align-items:center; gap: 10px;">
+
+            <h2 style="padding: 0 0 0 20px;">35</h2>
+            <img src="https://img.icons8.com/?size=100&id=4IZ8RiC9K8go&format=png&color=000000" id="star">
+
+            <h3>9.3(4,248)</h3>
+            </div>
+           
+            <div style="display: flex; align-items:center; gap: 10px;">
+                <button>Watch Now</button>
+                <button>+ Watch list</button>
+            </div>
+            </span>
+            
+        </div>  <div class="seriesGrid">
+            <span>
+           <img src="https://image-resizer-cloud-api.akamaized.net/image/F63FC0C0-475A-47FC-9F76-B57017B1753A/0-2x3.jpg?width=305&updatedTime=2024-11-15T12:38:09Z&dt=Web" id="seriesImg"> 
+           <div style="display: flex; align-items:center; gap: 10px;">
+
+            <h2 style="padding: 0 0 0 20px;">Premalu</h2>
+            <img src="https://img.icons8.com/?size=100&id=4IZ8RiC9K8go&format=png&color=000000" id="star">
+
+            <h3>9.3(4,248)</h3>
+            </div>
+           
+            <div style="display: flex; align-items:center; gap: 10px;">
+                <button>Watch Now</button>
+                <button>+ Watch list</button>
+            </div>
+            </span>
+            
+        </div>  <div class="seriesGrid">
+            <span>
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFX2OmI3RVIiDs8iPNS2mSKnGB2i19c-Z24h05B8EDmC9qwtKZ" id="seriesImg"> 
+           <div style="display: flex; align-items:center; gap: 10px;">
+
+            <h2 style="padding: 0 0 0 20px;">Dhootha</h2>
+            <img src="https://img.icons8.com/?size=100&id=4IZ8RiC9K8go&format=png&color=000000" id="star">
+
+            <h3>9.3(4,248)</h3>
+            </div>
+           
+            <div style="display: flex; align-items:center; gap: 10px;">
+                <button>Watch Now</button>
+                <button>+ Watch list</button>
+            </div>
+            </span>
+            
+        </div>  <div class="seriesGrid">
+            <span>
+           <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSvLE_IoF0B2aU-1HFNGzPA0V_uzNcpKYU53Ufat6brRYT5YrPQ" id="seriesImg"> 
+           <div style="display: flex; align-items:center; gap: 10px;">
+
+            <h2 style="padding: 0 0 0 20px;">Citadel</h2>
+            <img src="https://img.icons8.com/?size=100&id=4IZ8RiC9K8go&format=png&color=000000" id="star">
+
+            <h3>9.3(4,248)</h3>
+            </div>
+           
+            <div style="display: flex; align-items:center; gap: 10px;">
+                <button>Watch Now</button>
+                <button>+ Watch list</button>
+            </div>
+            </span>
+            
+        </div>  <div class="seriesGrid">
+            <span>
+           <img src="https://static.toiimg.com/photo/110452330/110452330.jpg" id="seriesImg"> 
+           <div style="display: flex; align-items:center; gap: 10px;">
+
+            <h2 style="padding: 0 0 0 20px;">Half-CA</h2>
+            <img src="https://img.icons8.com/?size=100&id=4IZ8RiC9K8go&format=png&color=000000" id="star">
+
+            <h3>9.3(4,248)</h3>
+            </div>
+           
+            <div style="display: flex; align-items:center; gap: 10px;">
+                <button>Watch Now</button>
+                <button>+ Watch list</button>
+            </div>
+            </span>
+            
+        </div>
+        <div class="seriesGrid">
+            <span>
+           <img src="https://static.toiimg.com/photo/110452156/110452156.jpg" id="seriesImg"> 
+           <div style="display: flex; align-items:center; gap: 10px;">
+
+            <h2 style="padding: 0 0 0 20px;">Aspirants</h2>
+            <img src="https://img.icons8.com/?size=100&id=4IZ8RiC9K8go&format=png&color=000000" id="star">
+
+            <h3>9.3(4,248)</h3>
+            </div>
+           
+            <div style="display: flex; align-items:center; gap: 10px;">
+                <button>Watch Now</button>
+                <button>+ Watch list</button>
+            </div>
+            </span>
+            
+        </div><div class="seriesGrid">
+            <span>
+           <img src="https://1.vikiplatform.com/c/40000c/690be2fa87.jpg?x=b&s=480x270&e=t&q=g" id="seriesImg"> 
+           <div style="display: flex; align-items:center; gap: 10px;">
+
+            <h2 style="padding: 0 0 0 20px;">Derailment</h2>
+            <img src="https://img.icons8.com/?size=100&id=4IZ8RiC9K8go&format=png&color=000000" id="star">
+
+            <h3>9.3(4,248)</h3>
+            </div>
+           
+            <div style="display: flex; align-items:center; gap: 10px;">
+                <button>Watch Now</button>
+                <button>+ Watch list</button>
+            </div>
+            </span>
+            
+        </div>
+
+    </div>
+    <h2 style="margin: 50px 0 0 100px;">Explore</h2>
+    <div class="ExploreContainer">
+        <div class="ExploreGrid">
+        <span>
+           <img src="https://img.icons8.com/?size=100&id=zUp64XaiqHhQ&format=png&color=000000"> 
+            <h3>Telugu</h3>
+             <p>Explore our range of Telugu movie collection in all genre</p>
+            
+            <button>Explore</button>
+            </span>
+        </div>
+        <div class="ExploreGrid">
+            <span>
+           <img src="https://img.icons8.com/?size=100&id=zUp64XaiqHhQ&format=png&color=000000"> 
+            <h3>English</h3>
+             <p>Explore our range of English movie collection in all genre</p>
+            
+            <button>Explore</button>
+            </span>
+        </div> <div class="ExploreGrid">
+            <span>
+           <img src="https://img.icons8.com/?size=100&id=zUp64XaiqHhQ&format=png&color=000000"> 
+            <h3>Hindi</h3>
+             <p>Explore our range of Hindi movie collection in all genre</p>
+            
+            <button>Explore</button>
+            </span>
+        </div> <div class="ExploreGrid">
+            <span>
+           <img src="https://img.icons8.com/?size=100&id=zUp64XaiqHhQ&format=png&color=000000"> 
+            <h3>Korea</h3>
+             <p>Explore our range of Korea movie collection in all genre</p>
+            
+            <button>Explore</button>
+            </span>
+        </div> <div class="ExploreGrid">
+            <span>
+           <img src="https://img.icons8.com/?size=100&id=zUp64XaiqHhQ&format=png&color=000000"> 
+            <h3>Tamil</h3>
+             <p>Explore our range of Tamil movie collection in all genre</p>
+            
+            <button>Explore</button>
+            </span>
+        </div> <div class="ExploreGrid">
+            <span>
+           <img src="https://img.icons8.com/?size=100&id=zUp64XaiqHhQ&format=png&color=000000"> 
+            <h3>Malayalam</h3>
+             <p>Explore our range of Malayalam movie collection in all genre</p>
+            
+            <button>Explore</button>
+            </span>
+        </div> <div class="ExploreGrid">
+            <span>
+           <img src="https://img.icons8.com/?size=100&id=zUp64XaiqHhQ&format=png&color=000000"> 
+            <h3>Kannada</h3>
+             <p>Explore our range of Kannada movie collection in all genre</p>
+            
+            <button>Explore</button>
+            </span>
+        </div> <div class="ExploreGrid">
+            <span>
+           <img src="https://img.icons8.com/?size=100&id=zUp64XaiqHhQ&format=png&color=000000"> 
+            <h3>French</h3>
+             <p>Explore our range of French movie collection in all genre</p>
+            
+            <button>Explore</button>
+            </span>
+        </div>
+
+    </div>
+    <div class="appContainer">
+        <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2024-11-13/dominos%20mobile%20logo_484028.png" id="mobile">
+        <span>
+        <h1>Unlock Exclusive offers</h1>
+        <p>For more features and premium experience Download Series Nest's app</p>
+        <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-21/Screenshot%202022-12-21%20at%202.47.09%20PM_558991.png" id="playstore">
+        <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-21/Screenshot%202022-12-21%20at%202.47.43%20PM_652243.png"  id="playstore">
+    </span>
+
+    </div>
+    
+
+    
+</body>
+</html>
